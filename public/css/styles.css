@@ -836,6 +836,10 @@ video {
   width: max-content;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .max-w-\[40\%\] {
   max-width: 40%;
 }
@@ -897,6 +901,10 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -915,6 +923,10 @@ video {
 
 .gap-\[18px\] {
   gap: 18px;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .overflow-auto {
