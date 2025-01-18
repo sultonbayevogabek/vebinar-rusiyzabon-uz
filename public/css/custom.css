@@ -44,9 +44,80 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(30, 138, 181, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(30, 138, 181, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(30, 138, 181, 0.5);
+  }
+}
 
 .gradient-button {
   background: radial-gradient(50% 50% at 50% 50%, #1E8AB5 0%, #007AAB 100%);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(30, 138, 181, 0.5);
+}
+
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Chegaradagi pulsatsiya */
+.gradient-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: inherit;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .font-poppins {

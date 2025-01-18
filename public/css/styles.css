@@ -56,8 +56,86 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(30, 138, 181, 0.5);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(30, 138, 181, 0.7);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(30, 138, 181, 0.5);
+  }
+}
+
 .gradient-button {
   background: radial-gradient(50% 50% at 50% 50%, #1E8AB5 0%, #007AAB 100%);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(30, 138, 181, 0.5);
+}
+
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Chegaradagi pulsatsiya */
+
+.gradient-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: inherit;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .font-poppins {
@@ -200,9 +278,7 @@ body {
   --tw-contain-style:  ;
 }
 
-/*
-! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
-*/
+/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -702,8 +778,8 @@ video {
   bottom: 0px;
 }
 
-.bottom-\[50px\] {
-  bottom: 50px;
+.bottom-\[40\%\] {
+  bottom: 40%;
 }
 
 .left-0 {
@@ -720,22 +796,6 @@ video {
 
 .top-6 {
   top: 1.5rem;
-}
-
-.bottom-\[100px\] {
-  bottom: 100px;
-}
-
-.bottom-\[50\%\] {
-  bottom: 50%;
-}
-
-.bottom-\[45\%\] {
-  bottom: 45%;
-}
-
-.bottom-\[40\%\] {
-  bottom: 40%;
 }
 
 .z-20 {
@@ -856,10 +916,6 @@ video {
   width: max-content;
 }
 
-.w-4\/5 {
-  width: 80%;
-}
-
 .max-w-\[40\%\] {
   max-width: 40%;
 }
@@ -887,22 +943,6 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.animate-bounce {
-  animation: bounce 1s infinite;
 }
 
 .cursor-pointer {
@@ -993,16 +1033,6 @@ video {
   border-radius: 0.5rem;
 }
 
-.rounded-b-\[24px\] {
-  border-bottom-right-radius: 24px;
-  border-bottom-left-radius: 24px;
-}
-
-.rounded-b-\[20px\] {
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
 .rounded-b-\[16px\] {
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -1028,11 +1058,6 @@ video {
 .border-\[\#bed4da\] {
   --tw-border-opacity: 1;
   border-color: rgb(190 212 218 / var(--tw-border-opacity, 1));
-}
-
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#F3F7F8\] {
@@ -1075,6 +1100,11 @@ video {
   padding: 1.25rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1113,11 +1143,6 @@ video {
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .py-5 {
@@ -1253,12 +1278,12 @@ video {
   text-decoration-line: line-through;
 }
 
-.opacity-80 {
-  opacity: 0.8;
-}
-
 .opacity-60 {
   opacity: 0.6;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .shadow-custom {
@@ -1363,11 +1388,6 @@ video {
     border-radius: 12px;
   }
 
-  .lg\:rounded-b-\[32px\] {
-    border-bottom-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-  }
-
   .lg\:rounded-b-\[28px\] {
     border-bottom-right-radius: 28px;
     border-bottom-left-radius: 28px;
@@ -1430,6 +1450,14 @@ video {
   .lg\:text-\[50px\] {
     font-size: 50px;
   }
+
+  .lg\:text-\[36px\] {
+    font-size: 36px;
+  }
+
+  .lg\:text-\[22px\] {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1459,11 +1487,6 @@ video {
 
   .xl\:gap-\[14px\] {
     gap: 14px;
-  }
-
-  .xl\:rounded-b-\[40px\] {
-    border-bottom-right-radius: 40px;
-    border-bottom-left-radius: 40px;
   }
 
   .xl\:rounded-b-\[36px\] {
@@ -1502,5 +1525,9 @@ video {
 
   .xl\:text-\[70px\] {
     font-size: 70px;
+  }
+
+  .xl\:text-\[26px\] {
+    font-size: 26px;
   }
 }
