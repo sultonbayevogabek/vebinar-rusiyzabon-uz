@@ -1,38 +1,44 @@
-@font-face {
-  font-display: swap;
+/*@font-face {*/
 
-  font-family: 'Staatliches';
+/*  font-display: swap;*/
 
-  font-style: normal;
+/*  font-family: 'Staatliches';*/
 
-  font-weight: 400;
+/*  font-style: normal;*/
 
-  src: url('../fonts/staatliches.ttf') format('truetype');
-}
+/*  font-weight: 400;*/
 
-@font-face {
-  font-display: swap;
+/*  src: url('../fonts/staatliches.ttf') format('truetype');*/
 
-  font-family: 'Poppins';
+/*}*/
 
-  font-style: normal;
+/*@font-face {*/
 
-  font-weight: 400;
+/*  font-display: swap;*/
 
-  src: url('../fonts/poppins-400.ttf') format('truetype');
-}
+/*  font-family: 'Poppins';*/
 
-@font-face {
-  font-display: swap;
+/*  font-style: normal;*/
 
-  font-family: 'Poppins';
+/*  font-weight: 400;*/
 
-  font-style: normal;
+/*  src: url('../fonts/poppins-400.ttf') format('truetype');*/
 
-  font-weight: 500;
+/*}*/
 
-  src: url('../fonts/poppins-500.ttf') format('truetype');
-}
+/*@font-face {*/
+
+/*  font-display: swap;*/
+
+/*  font-family: 'Poppins';*/
+
+/*  font-style: normal;*/
+
+/*  font-weight: 500;*/
+
+/*  src: url('../fonts/poppins-500.ttf') format('truetype');*/
+
+/*}*/
 
 body {
   background-repeat: no-repeat;
@@ -278,7 +284,7 @@ body {
   --tw-contain-style:  ;
 }
 
-/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -1435,6 +1441,10 @@ video {
     font-size: 20px;
   }
 
+  .lg\:text-\[22px\] {
+    font-size: 22px;
+  }
+
   .lg\:text-\[24px\] {
     font-size: 24px;
   }
@@ -1447,16 +1457,12 @@ video {
     font-size: 32px;
   }
 
-  .lg\:text-\[50px\] {
-    font-size: 50px;
-  }
-
   .lg\:text-\[36px\] {
     font-size: 36px;
   }
 
-  .lg\:text-\[22px\] {
-    font-size: 22px;
+  .lg\:text-\[50px\] {
+    font-size: 50px;
   }
 }
 
@@ -1515,6 +1521,10 @@ video {
     font-size: 24px;
   }
 
+  .xl\:text-\[26px\] {
+    font-size: 26px;
+  }
+
   .xl\:text-\[28px\] {
     font-size: 28px;
   }
@@ -1525,9 +1535,5 @@ video {
 
   .xl\:text-\[70px\] {
     font-size: 70px;
-  }
-
-  .xl\:text-\[26px\] {
-    font-size: 26px;
   }
 }
