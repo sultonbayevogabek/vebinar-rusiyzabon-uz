@@ -726,6 +726,14 @@ video {
   bottom: 100px;
 }
 
+.bottom-\[50\%\] {
+  bottom: 50%;
+}
+
+.bottom-\[45\%\] {
+  bottom: 45%;
+}
+
 .z-20 {
   z-index: 20;
 }
