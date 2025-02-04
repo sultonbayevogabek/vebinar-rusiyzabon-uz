@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d47c4bb3-3806-442b-b8b5-b7710b17ae36" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/public/img/zarina.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/telegram.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/telegram.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +28,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/sultonbayevogabek/vebinar-rusiyzabon-uz.git&quot;,
-    &quot;accountId&quot;: &quot;96b77a6e-d0c2-4cbf-911d-84f2a02fc3e0&quot;
+    &quot;accountId&quot;: &quot;d8f2dac6-2e90-4298-b807-cfffb7fa378f&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -48,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sultonbayevogabek/Orders/vebinar-rusiyzabon-uz",
+    "last_opened_file_path": "/Users/sultonbayevogabek/Orders/vebinar-rusiyzabon-uz/public/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +83,9 @@
       <workItem from="1737623354999" duration="695000" />
       <workItem from="1737724926916" duration="218000" />
       <workItem from="1737725146622" duration="66000" />
+      <workItem from="1737875791399" duration="637000" />
+      <workItem from="1738310463641" duration="1252000" />
+      <workItem from="1738695270704" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
